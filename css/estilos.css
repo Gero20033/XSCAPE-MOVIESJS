@@ -1,0 +1,236 @@
+:root {
+    --fondo: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+/* ---- ----- ----- Header ----- ----- ----- */
+
+.header {
+    padding: 30px 0px;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logotipo {
+    max-width: auto;
+    max-height: 100px;
+}
+
+header nav a {
+    color: #AAA;
+    text-decoration: none;
+    margin: 20px;
+}
+
+header nav a:hover, 
+header nav a.Inicio {
+    color: #fff;
+}
+
+header .Resultado {
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+
+.pelicula-principal {
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(../img/scarface.banner.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: flex-end;
+}
+
+.pelicula-principal .contenedor {
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+
+.pelicula-principal .titulo {
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+.pelicula-principal .boton {
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover {
+    background: #fff;
+    color: #000
+}
+
+.pelicula-principal .boton i{
+    margin-right: 1.25em;
+}
+
+/* ---- ----- ----- Pelicula Populares ----- ----- ----- */
+
+.contenedor-titulo2 {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo2 h3 {
+	color: #fff;
+    font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+}
+
+.peliculas-recomendadas .contenedor-peliculas1 .peliculas1 {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-peliculas1 .peliculas1 .pelicula img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Peliculas ----- ----- ----- */
+
+h2{
+    text-decoration: none;
+    color: #C2C2C2;
+    margin-left: 25px
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+
+img{
+    height: 230px;
+}
+li{
+    margin: 0px 5px ;
+}
+
+
+.nombreDelElemento{
+    margin: 0%;
+}
+
+h3{
+    margin: 0%;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+    
+}
+.pelisapi{
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+}
+
+.article{
+    width: 100%;
+}
+
+/* ---- ----- ----- Footer ----- ----- ----- */
+
+footer .contenedor2 {
+    background-color: var(--fondo);
+    width: 90%;
+    margin: auto;
+}
+
+.footer {
+    padding: 30px 0px;
+}
+
+footer .contenedor2 {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .logotipo {
+    max-width: auto;
+    max-height: 100px;
+}
+
+footer .derechos {
+    text-decoration: none;
+    color: #01b4e4;
+    margin: 10px;
+}
+
+footer .nombre {
+    text-decoration: none;
+    color: #01b4e4;
+    font-size: 15px;
+}
+
+/* ---- ----- ----- Media ----- ----- ----- */
+
+@media screen and (max-width: 650px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula-principal {
+		font-size: 14px;
+	}
+
+	.pelicula-principal .descripcion {
+		max-width: 100%;
+	}
+}
