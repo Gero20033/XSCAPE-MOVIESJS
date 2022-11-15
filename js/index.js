@@ -1,4 +1,4 @@
-let categories=document.querySelector(".categories.uno");
+let categories=document.querySelector(".peliculas23.popu");
     categories.style.display="flex";
     categories.style.flexWrap="wrap";
 
@@ -6,7 +6,7 @@ let info = ''
 
 //let categories=""
 
-fetch("https://api.themoviedb.org/3/movie/popular?api_key=ba0b591fbb4dcbf21e7a279fceca5d5e")
+fetch("https://api.themoviedb.org/3/movie/popular?api_key=5f0f24101490e6eaa3bbc2c5c64c7369")
 .then(function(response){
     return response.json()
 })
