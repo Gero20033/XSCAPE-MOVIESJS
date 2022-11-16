@@ -133,26 +133,29 @@ header .Resultado {
 	vertical-align: top;
 }
 
-/* ---- ----- ----- Peliculas ----- ----- ----- */
+/* ---- ----- ----- Peliculas Mas valoradas ----- ----- ----- */
 
 h2{
     text-decoration: none;
-    color: #C2C2C2;
-    margin-left: 25px
+    color: #fff;
+    margin-left: 10px
 }
 
 ul{
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-around;
     list-style: none;
 }
 
 
 img{
-    height: 230px;
+    height: 300px;
+    vertical-align: top;
+    
 }
 li{
-    margin: 0px 5px ;
+    margin: 0px 2px ;
 }
 
 

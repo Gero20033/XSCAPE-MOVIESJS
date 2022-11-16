@@ -12,7 +12,7 @@ fetch("https://api.themoviedb.org/3/movie/popular?api_key=5f0f24101490e6eaa3bbc2
 })
 .then(function(data){
     console.log(data);
-    for(let i=0; i < data.results.length; i++){
+    for(let i=12; i < data.results.length; i++){
         info +=`
         <article>
         <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt=''/>
