@@ -4,7 +4,7 @@ let categories=document.querySelector(".peliculas23.popu");
 
 let info = ''
 
-//let categories=""
+//let .peliculas23=""
 
 fetch("https://api.themoviedb.org/3/movie/popular?api_key=5f0f24101490e6eaa3bbc2c5c64c7369")
 .then(function(response){
