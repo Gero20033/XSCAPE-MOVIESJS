@@ -9,39 +9,30 @@
 
 <body>
 
-    <header class="estructura"> 
-        
-        <ul class="navegador">
-            <li class = "contenedorlogo"> 
-                <a href="./index.html">
-                    <img class="logo" src="./img/logo-final.png">
-                </a>
-            </li>
+    <header> 
+
+         <div class="contenedor">
+            <img src="img/logo.png" class="logotipo">
+
+            <div class="Resultado">
+                <form action="search-results.html" method="GET"> 
+                    <input type = "text" value="" name="name" placeholder="Ingresar una pelicula o una serie"> 
+                    </form>
             <nav>
                 <a href="index.html" class="Inicio">Inicio</a>
                 <a href="Favoritos.html">Favoritos</a>
                 <a href="Generos.html">Géneros</a>
             </nav>
-
-            <li class="Resultado"> 
-                <form action="./search-results.html" method="GET"> 
-                <button type="submit"> <i class="fa-solid fa-magnifying-glass"><a href="./search-results.html"></a></i></button> 
-                <input type = "text" value="" name="name" placeholder="Buscador"> 
-
-                </form>
-            </li>
-         </ul>   
-
-               
+        </div>     
         
     </header>
 
 
     <section class = "Busqueda">
 
-<h2 class="Titulo-busqueda"> Resultado de peliculas</h2>
+<h2 class="Titulo-busqueda">Resultado de peliculas</h2>
 
-    <a class= "datails" href="./detail-movie.html">
+    <a class= "datails" href="">
       </section>
       <section class="BusquedaPeliculas"> 
       </section>
@@ -52,7 +43,7 @@
 <h2 class="Titulo-busqueda">Resultado de series</h2>
     </section>
     
-    <a class="details" href="./detail-serie.html">
+    <a class="details" href="">
       <section class="BusquedaSeries">
       </section>
    </a>
@@ -72,7 +63,7 @@
             </div>
         </footer>
 
-        <script type="text/javascript" src="js/index.js"></script> 
+        <script type="text/javascript" src="js/search-results.js"></script> 
 
     </body>
 
