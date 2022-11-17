@@ -4,8 +4,6 @@ let categories=document.querySelector(".peliculas23.toprated");
 
 let info = ''
 
-//let .peliculas23=""
-
 fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=5f0f24101490e6eaa3bbc2c5c64c7369")
 .then(function(response){
     return response.json()
