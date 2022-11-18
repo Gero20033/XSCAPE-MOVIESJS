@@ -12,10 +12,13 @@ fetch("https://api.themoviedb.org/3/movie/popular?api_key=5f0f24101490e6eaa3bbc2
     console.log(data);
     for(let i=12; i < data.results.length; i++){
         infoPopulares +=`
+        <a href="movie-detail.html?id=${data.results[i].id}">
         <article>
         <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt='${data.results[i].original_title}'/>
         <p> ${data.results[i].original_title}</p>
-        </article>`
+        </article>
+        </a>
+        `
     }
     categoriesPopulares.innerHTML= infoPopulares
 })

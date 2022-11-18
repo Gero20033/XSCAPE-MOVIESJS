@@ -135,6 +135,13 @@ footer .nombre {
     margin-right: 1.25em;
 }
 
+.titulo {
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+    color: #fff;
+}
+
 @media screen and (max-width: 650px) {
 	header .logotipo {
 		margin-bottom: 10px;
@@ -154,3 +161,5 @@ footer .nombre {
 		max-width: 100%;
 	}
 }
+
+
