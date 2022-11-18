@@ -12,10 +12,13 @@ fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=5f0f24101490e6eaa3bb
     console.log(data);
     for(let i=12; i < data.results.length; i++){
         infoMasValorada +=`
+        <a href="movie-detail.html?id=${data.results[i].id}">
         <article>
         <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt='${data.results[i].original_title}'/>
-        <p> ${data.results[i].original_title}</p>
-        </article>`
+        <h4> ${data.results[i].original_title}</h4>
+        </article>
+        </a>
+        `
     }
     categoriesMasValoradas.innerHTML= infoMasValorada
 })

@@ -170,6 +170,21 @@ h3{
 	font-size: 15px;
     
 }
+
+h4{
+    text-decoration: none;
+    margin: 0%;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
 .pelisapi{
     color: #fff;
     font-family: 'Open Sans', sans-serif;
@@ -201,7 +216,7 @@ footer .contenedor2 {
 
 footer .logotipo {
     max-width: auto;
-    max-height: 100px;
+    max-height: 30px;
 }
 
 footer .derechos {
