@@ -12,7 +12,7 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=5f0f24101490e6eaa3bbc2c5c
     console.log(data);
     for(let i=12; i < data.results.length; i++){
         infoSeriespopu +=`
-        <a href="movie-detail.html?id=${data.results[i].id}">
+        <a href="movie-detail2.html?id=${data.results[i].id}">
         <article>
         <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt='${data.results[i].original_title}'/>
         <h4> ${data.results[i].original_title}</h4>

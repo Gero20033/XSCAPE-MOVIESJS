@@ -20,6 +20,8 @@ fetch(
                 <div class="contenedor">
                     <h3 class="titulo">${data.original_title}</h3>
                     <p class="descripcion">${data.overview}</p>
+                    <p>Estreno:${data.release_date} </p>
+                    <p>Calificacion:${data.account_id} </p>
 
                 </div>
             </div>
