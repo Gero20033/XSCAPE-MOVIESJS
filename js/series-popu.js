@@ -16,6 +16,7 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=5f0f24101490e6eaa3bbc2c5c
         <article>
         <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt='${data.results[i].name}'/>
         <h4> ${data.results[i].name}</h4>
+        <h4> ${data.results[i].first_air_date}</h4>
         </article>
         </a>
         `

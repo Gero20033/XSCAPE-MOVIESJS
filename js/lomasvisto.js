@@ -16,6 +16,7 @@ fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=5f0f24101490e6eaa3bb
         <article>
         <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt='${data.results[i].original_title}'/>
         <h4> ${data.results[i].original_title}</h4>
+        <h4> ${data.results[i].release_date}</h4>
         </article>
         </a>
         `
