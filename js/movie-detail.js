@@ -36,7 +36,7 @@ fetch(
     let infoGeneros = "Generos: "
     for(let i = 0; i < data.genres.length; i++) {
       infoGeneros += `
-        <a href="/genere?id=${data.genres[i].id}">${data.genres[i].name}</a>
+        <a href="/generos.html?id=${data.genres[i].id}">${data.genres[i].name}</a>
       `
     }
     contendorGeneros.innerHTML = infoGeneros
