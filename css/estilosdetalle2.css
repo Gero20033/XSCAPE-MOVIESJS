@@ -133,6 +133,18 @@ header .Resultado {
 	vertical-align: top;
 }
 
+.generos {
+    color: #fff; 
+    text-decoration: none;
+}
+
+.pelicula {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: flex-end;
+}
+
 /* ---- ----- ----- Peliculas Mas valoradas ----- ----- ----- */
 
 h2{
