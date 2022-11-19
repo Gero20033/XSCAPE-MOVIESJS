@@ -14,8 +14,8 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=5f0f24101490e6eaa3bbc2c5c
         infoSeriespopu +=`
         <a href="movie-detail2.html?id=${data.results[i].id}">
         <article>
-        <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt='${data.results[i].original_title}'/>
-        <h4> ${data.results[i].original_title}</h4>
+        <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt='${data.results[i].name}'/>
+        <h4> ${data.results[i].name}</h4>
         </article>
         </a>
         `

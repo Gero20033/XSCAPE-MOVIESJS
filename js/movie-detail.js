@@ -18,14 +18,27 @@ fetch(
 
     <div class="pelicula-principal">
                 <div class="contenedor">
-                    <h3 class="titulo">${data.original_title}</h3>
-                    <p class="descripcion">${data.overview}</p>
-                    <p>Estreno:${data.release_date} </p>
-                    <p>Calificacion:${data.account_id} </p>
-
+                    <h3 class="titulo"> ${data.original_title}</h3>
+                    <p class="descripcion"> ${data.overview}</p>
+                    <p>Estreno: ${data.release_date} </p>
+                    <p>Calificacion: ${data.vote_average} </p>
+                    <div class="generos">
+                    
+                    </div>
                 </div>
             </div>
     `
-
     pelicula.innerHTML = infoPelicula;
+    pelicula.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500${data.backdrop_path})`
+
+    let contendorGeneros = document.querySelector(".generos");
+    let infoGeneros = "Generos: "
+    for(let i = 0; i < data.genres.length; i++) {
+      infoGeneros += `
+        <a href="/genere?id=${data.genres[i].id}">${data.genres[i].name}</a>
+      `
+    }
+    contendorGeneros.innerHTML = infoGeneros
+
   });
+
