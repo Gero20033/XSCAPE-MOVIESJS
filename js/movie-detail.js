@@ -22,9 +22,9 @@ fetch(
                     <p class="descripcion"> ${data.overview}</p>
                     <p>Estreno: ${data.release_date} </p>
                     <p>Calificacion: ${data.vote_average} </p>
+                    <p>Duracion ${data.runtime} </p>
+
                     <div class="generos">
-                    </div>
-                    <div class="reproductores">
                     </div>
                 </div>
             </div>
