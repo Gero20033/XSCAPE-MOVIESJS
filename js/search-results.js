@@ -1,4 +1,4 @@
-let apiKey = "ba0b591fbb4dcbf21e7a279fceca5d5e"
+let apiKey = "5f0f24101490e6eaa3bbc2c5c64c7369"
 
 window.addEventListener('load',function(){
 
@@ -20,18 +20,24 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
     for (i=0; i< 5;i++){
         if (data.results[i].media_type === 'movie'){
         movies += `
-        <section class="caja1">
         <a href="movie-detail2.html?id=${data.results[i].id}">
-            <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
-            <h2 class="tituloresultados"> ${data.results[i].title} </h2>
+        <article>
+        <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}'/>
+        <h4> ${data.results[i].original_title}</h4>
+        <h4> ${data.results[i].release_date}</h4>
+        </article>
         </a>
-        </section>
         `
 } else {
-    series += `<section class="caja1">
-    <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_name}' />
-    <h2 class="tituloresultados"> ${data.results[i].original_name} </h2>
-    </section>`
+    series += `
+    <a href="series-detail2.html?id=${data.results[i].id}">
+    <article>
+    <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}'/>
+    <h4> ${data.results[i].name}</h4>
+    <h4> ${data.results[i].first_air_date}</h4>
+    </article>
+    </a>
+    `
     console.log(data)
 }}
     container.innerHTML = movies

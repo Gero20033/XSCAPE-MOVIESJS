@@ -22,12 +22,16 @@ fetch(
                     <p class="descripcion"> ${data.overview}</p>
                     <p>Estreno: ${data.release_date} </p>
                     <p>Calificacion: ${data.vote_average} </p>
-                    <p>Duracion ${data.runtime} </p>
+                    <p >Duracion: ${data.runtime} </p>
 
                     <div class="generos">
                     </div>
+                    <div class="Reproductores">
+                    </div>
                 </div>
-            </div>
+                </div>
+      
+              </div>
     `
     pelicula.innerHTML = infoPelicula;
     pelicula.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500${data.backdrop_path})`
@@ -36,13 +40,23 @@ fetch(
     let infoGeneros = "Generos: "
     for(let i = 0; i < data.genres.length; i++) {
       infoGeneros += `
-        <a href="/generos.html?id=${data.genres[i].id}">${data.genres[i].name}</a>
+        <a href="/generos.html?id=${data.genres[i].id}" class="generos-peliculas">${data.genres[i].name} </a>
       `
     }
     contendorGeneros.innerHTML = infoGeneros
 
+    let contendorReproductores = document.querySelector(".Reproductores");
+    let infoReproductores = "Reproductores: "
+    for(let i = 0; i < data.production_companies.length; i++) {
+      infoReproductores += 
+      `
+      <a id= ${data.production_companies[i].id} class="generos-peliculas">${data.production_companies[i].name}</a>
+
+      `
+    }
+    contendorReproductores.innerHTML = infoReproductores
+
+
   });
-
-
 
 
