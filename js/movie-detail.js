@@ -23,15 +23,16 @@ fetch(
                     <p>Estreno: ${data.release_date} </p>
                     <p>Calificacion: ${data.vote_average} </p>
                     <p >Duracion: ${data.runtime} </p>
-
                     <div class="generos">
                     </div>
                     <div class="Reproductores">
                     </div>
+                    <br></br>
+                    <a href="detalle-scarface.html" class="boton"><i class="fas fa-info-circle"></i>Recomendaciones</a>
                 </div>
+                
+
                 </div>
-      
-              </div>
     `
     pelicula.innerHTML = infoPelicula;
     pelicula.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500${data.backdrop_path})`
