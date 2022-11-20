@@ -42,7 +42,10 @@ header nav a {
     margin: 20px;
 }
 
-
+header nav a:hover, 
+header nav a.Géneros {
+    color: #fff;
+}
 
 header .Resultado {
     padding: 30px 0px;
@@ -57,7 +60,7 @@ header .Resultado {
     font-size: 16px;
     min-height: 40.62em;
     color: #fff;
-    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url();
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(../img/scarface.banner.jpg);
     background-position: center;
     background-size: cover;
     margin-bottom: 3.12em;
@@ -97,15 +100,6 @@ header .Resultado {
     font-size: 1.12em;
 }
 
-.pelicula-principal .boton:hover {
-    background: #fff;
-    color: #000
-}
-
-.pelicula-principal .boton i{
-    margin-right: 1.25em;
-}
-
 /* ---- ----- ----- Pelicula Populares ----- ----- ----- */
 
 .contenedor-titulo2 {
@@ -128,18 +122,6 @@ header .Resultado {
 .peliculas-recomendadas .contenedor-peliculas1 .peliculas1 .pelicula img {
 	width: 100%;
 	vertical-align: top;
-}
-
-.generos {
-    color: #fff; 
-    text-decoration: none;
-}
-
-.pelicula {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    align-items: flex-end;
 }
 
 /* ---- ----- ----- Peliculas Mas valoradas ----- ----- ----- */
@@ -202,6 +184,12 @@ h4{
 
 .article{
     width: 100%;
+}
+
+.generos1 {
+    font-size: 15px;
+    text-decoration: none;
+    color:#fff;
 }
 
 /* ---- ----- ----- Footer ----- ----- ----- */
