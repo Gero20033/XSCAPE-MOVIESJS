@@ -1,15 +1,18 @@
-let categoriesPopulares=document.querySelector(".popu")
-    categoriesPopulares.style.display="flex";
-    categoriesPopulares.style.flexWrap="wrap";
+let generosDetalles=document.querySelector(".popu")
+    generosDetalles.style.display="flex";
+    generosDetalles.style.flexWrap="wrap";
 
 let infoPopulares = ''
 
-fetch("https://api.themoviedb.org/3/movie/popular?api_key=5f0f24101490e6eaa3bbc2c5c64c7369")
-.then(function(response){
+fetch(
+    "https://api.themoviedb.org/3/movie/popular?api_key=5f0f24101490e6eaa3bbc2c5c64c7369"
+    )
+    .then(function(response){
     return response.json()
 })
 .then(function(data){
     console.log(data);
+    
     for(let i=12; i < data.results.length; i++){
         infoPopulares +=`
         <a href="movie-detail2.html?id=${data.results[i].id}">
@@ -21,7 +24,7 @@ fetch("https://api.themoviedb.org/3/movie/popular?api_key=5f0f24101490e6eaa3bbc2
         </a>
         `
     }
-    categoriesPopulares.innerHTML= infoPopulares
+    generosDetalles.innerHTML= infoPopulares
 })
 .catch(function(error){
     console.log("Error: " + error);
