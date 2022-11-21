@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/estilosdetalle.css">
+        <link rel="stylesheet" href="css/estilos.css">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
         <title>XSCAPE</title>
     </head>
@@ -11,11 +11,12 @@
         <header>
             
             <div class="contenedor">
+                
                 <a title="XSCAPE" href="index.html"><img src="img/logo.png" class="logotipo" /></a>
 
                 <div class="Resultado">
-                    <form action="" method="GET"> 
-                        <input type = "text" value="" name="name" placeholder="Buscador"> 
+                    <form action="search-results.html" method="GET"> 
+                        <input type = "text" value="" name="name" placeholder="Ingresar una pelicula o una serie"> 
                         </form>
                 <nav>
                     <a href="index.html" class="Inicio">Inicio</a>
@@ -25,21 +26,15 @@
             </div>
         
         </header>
+           
+        <main>
 
-        <main> 
-            <div class="pelicula-principal">
-                <div class="contenedor">
-                    <h3 class="titulo">Scarface</h3>
-                    <p class="descripcion">Un emigrante cubano frío y sanguinario, Tony Montana, llega de Cuba para instalarse en Miami, donde se propone hacerse con un nombre dentro del crimen organizado de Florida. Junto a su amigo, Manny Rivera, inicia una ascendente carrera delictiva.</p>
+            <div class="contenedor-peliculas-favoritas"></div>
+            <div class="contenedor-series-favoritas"></div>
 
-                </div>
-            </div>
         </main>
 
-        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-
         <footer>
-            <footer>
             <div class="contenedor2">
                 <img src="img/tmdblogo.svg" class="logotipo">
                 <div class="derechos">
@@ -50,6 +45,9 @@
             </div>
             </div>
         </footer>
+
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/favorites.js"></script>
 
     </body>
       

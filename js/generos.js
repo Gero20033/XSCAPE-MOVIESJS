@@ -13,7 +13,7 @@ fetch(
 
     for(let i=0; i<data.genres.length; i++) {
         infoContenedorGeneros += `
-        <li><a class="generos1" href="/generosdetalles.html?id=${data.genres[i].id}">${data.genres[i].name} </a></li>   
+        <li><a class="generos1" href="generosdetalles.html?id=${data.genres[i].id}">${data.genres[i].name} </a></li>   
         `
     }
 

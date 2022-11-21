@@ -30,36 +30,54 @@ fetch(
                     <div class="Reco">
                     </div>
                     <br></br>
-                    <a href="recomendaciones.html" class="boton"><i class="fas fa-info-circle"></i>Recomendaciones</a>
-                    
+                    <a href="recomendaciones.html?id=${data.id}" class="boton"><i class="fas fa-info-circle"></i>Recomendaciones</a>
+                    <button id="boton-favoritos" class="boton" onClick=handleClickFavorites() >Agregar a Favoritos</button>
                 </div>
                 
 
                 </div>
-    `
+    `;
     pelicula.innerHTML = infoPelicula;
-    pelicula.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500${data.backdrop_path})`
+    pelicula.style.backgroundImage = `url(https://image.tmdb.org/t/p/original${data.backdrop_path})`;
 
     let contendorGeneros = document.querySelector(".generos");
-    let infoGeneros = "Generos: "
-    for(let i = 0; i < data.genres.length; i++) {
+    let infoGeneros = "Generos: ";
+    for (let i = 0; i < data.genres.length; i++) {
       infoGeneros += `
         <a href="/generos.html?id=${data.genres[i].id}" class="generos-peliculas">${data.genres[i].name} </a>
-      `
+      `;
     }
-    contendorGeneros.innerHTML = infoGeneros
+    contendorGeneros.innerHTML = infoGeneros;
 
     let contendorReproductores = document.querySelector(".Reproductores");
-    let infoReproductores = "Reproductores: "
-    for(let i = 0; i < data.production_companies.length; i++) {
-      infoReproductores += 
-      `
+    let infoReproductores = "Reproductores: ";
+    for (let i = 0; i < data.production_companies.length; i++) {
+      infoReproductores += `
       <a id= ${data.production_companies[i].id} class="generos-peliculas">${data.production_companies[i].name}</a>
 
-      `
+      `;
     }
-    contendorReproductores.innerHTML = infoReproductores
-
+    contendorReproductores.innerHTML = infoReproductores;
   });
 
+  //Click de Favoritos
 
+function handleClickFavorites() {
+  if (localStorage.getItem("favorites-peliculas") == null) {
+    localStorage.setItem("favorites-peliculas", JSON.stringify([]));
+  }
+
+  let listaIdPeliculas = JSON.parse(
+    localStorage.getItem("favorites-peliculas")
+  );
+
+  if (listaIdPeliculas.includes(id)) {
+    listaIdPeliculas = listaIdPeliculas.filter(function(item) {
+      return item != id;
+    });
+  } else {
+    listaIdPeliculas.push(id);
+  }
+
+  localStorage.setItem("favorites-peliculas", JSON.stringify(listaIdPeliculas));
+}
