@@ -15,14 +15,7 @@ fetch(
     console.log(data);
 
     infoRecomendacion += `
-    <a href="movie-detail2.html?id=${data.results[i].id}">
-        <article>
-        <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt='${data.results[i].original_title}'/>
-        <h4> ${data.results[i].original_title}</h4>
-        <h4> ${data.results[i].release_date}</h4>
-        </article>
-        </a>
-
+    
     `
 
   });

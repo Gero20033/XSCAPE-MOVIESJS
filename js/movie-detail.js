@@ -27,8 +27,11 @@ fetch(
                     </div>
                     <div class="Reproductores">
                     </div>
+                    <div class="Reco">
+                    </div>
                     <br></br>
                     <a href="recomendaciones.html" class="boton"><i class="fas fa-info-circle"></i>Recomendaciones</a>
+                    
                 </div>
                 
 
@@ -56,7 +59,6 @@ fetch(
       `
     }
     contendorReproductores.innerHTML = infoReproductores
-
 
   });
 
