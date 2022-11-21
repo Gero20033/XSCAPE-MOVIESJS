@@ -28,7 +28,7 @@ fetch(
                     <div class="Reproductores">
                     </div>
                     <br></br>
-                    <a href="detalle-scarface.html" class="boton"><i class="fas fa-info-circle"></i>Recomendaciones</a>
+                    <a href="recomendaciones.html" class="boton"><i class="fas fa-info-circle"></i>Recomendaciones</a>
                 </div>
                 
 
