@@ -28,6 +28,7 @@ fetch(
                     </div>
                     <br></br>
                     <a href="recomendaciones.html" class="boton"><i class="fas fa-info-circle"></i>Recomendaciones</a>
+                    <button id="boton-favoritos" class="boton" onClick=handleClickFavorites() >Agregar a Favoritos</button>
                 </div>
             </div>
     `
@@ -55,6 +56,28 @@ fetch(
     contendorReproductores.innerHTML = infoReproductores
 
   });
+
+  //Click de Favoritos
+
+function handleClickFavorites() {
+  if (localStorage.getItem("favorites-peliculas") == null) {
+    localStorage.setItem("favorites-peliculas", JSON.stringify([]));
+  }
+
+  let listaIdPeliculas = JSON.parse(
+    localStorage.getItem("favorites-peliculas")
+  );
+
+  if (listaIdPeliculas.includes(id)) {
+    listaIdPeliculas = listaIdPeliculas.filter(function(item) {
+      return item != id;
+    });
+  } else {
+    listaIdPeliculas.push(id);
+  }
+
+  localStorage.setItem("favorites-peliculas", JSON.stringify(listaIdPeliculas));
+}
 
 
 
