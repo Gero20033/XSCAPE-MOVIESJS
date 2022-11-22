@@ -30,7 +30,7 @@ fetch(
                     <div class="Reco">
                     </div>
                     <br></br>
-                    <a href="recomendaciones.html?id=${data.id}" class="boton"><i class="fas fa-info-circle"></i>Recomendaciones</a>
+                    <a href="recomendaciones.html?id=${data.id}" class="boton">Recomendaciones</a>
                     <button id="boton-favoritos" class="boton" onClick=handleClickFavorites() >Agregar a Favoritos</button>
                 </div>
                 
@@ -53,7 +53,7 @@ fetch(
     let infoReproductores = "Reproductores: ";
     for (let i = 0; i < data.production_companies.length; i++) {
       infoReproductores += `
-      <a id= ${data.production_companies[i].id} class="generos-peliculas">${data.production_companies[i].name}</a>
+      <a id= ${data.production_companies[i].id} class="generos-peliculas">${data.production_companies[i].name} ${data.production_companies[i].logo_path}  </a>
 
       `;
     }

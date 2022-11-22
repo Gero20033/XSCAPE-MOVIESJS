@@ -1,7 +1,4 @@
 let categoriesMasValoradas=document.querySelector(".toprated");
-    categoriesMasValoradas.style.display="flex";
-    categoriesMasValoradas.style.flexWrap="wrap";
-
 let infoMasValorada = ''
 
 fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=5f0f24101490e6eaa3bbc2c5c64c7369")

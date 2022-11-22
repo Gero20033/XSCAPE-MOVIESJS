@@ -1,4 +1,4 @@
-let generosDetalles=document.querySelector(".detallegenero")
+let generosDetalles = document.querySelector(".recomendacion")
 let parametros = new URLSearchParams(window.location.search);
 let id = parametros.get("id");
 
@@ -6,6 +6,7 @@ let id = parametros.get("id");
 let infoDetailgenre = ''
 
 fetch(`https://api.themoviedb.org/3/discover/movie?api_key=5f0f24101490e6eaa3bbc2c5c64c7369&with_genres=${id}`)
+
 .then(function(response){
     return response.json()
 })

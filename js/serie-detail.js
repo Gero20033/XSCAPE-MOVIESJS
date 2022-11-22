@@ -27,7 +27,7 @@ fetch(
                     <div class="Reproductores">
                     </div>
                     <br></br>
-                    <a href="recomendaciones.html" class="boton"><i class="fas fa-info-circle"></i>Recomendaciones</a>
+                    <a href="recomendacionserie.html?id=${data.id}" class="boton">Recomendaciones</a>
                     <button id="boton-favoritos" class="boton" onClick=handleClickFavorites() >Agregar a Favoritos</button>
                 </div>
             </div>
@@ -60,25 +60,21 @@ fetch(
   //Click de Favoritos
 
 function handleClickFavorites() {
-  if (localStorage.getItem("favorites-peliculas") == null) {
-    localStorage.setItem("favorites-peliculas", JSON.stringify([]));
+  if (localStorage.getItem("favorites-serie") == null) {
+    localStorage.setItem("favorites-serie", JSON.stringify([]));
   }
 
-  let listaIdPeliculas = JSON.parse(
-    localStorage.getItem("favorites-peliculas")
+  let listaIdSeries = JSON.parse(
+    localStorage.getItem("favorites-series")
   );
 
-  if (listaIdPeliculas.includes(id)) {
-    listaIdPeliculas = listaIdPeliculas.filter(function(item) {
+  if (listaIdSeries.includes(id)) {
+    listaIdSeries = listaIdSeries.filter(function(item) {
       return item != id;
     });
   } else {
-    listaIdPeliculas.push(id);
+    listaIdSeries.push(id);
   }
 
-  localStorage.setItem("favorites-peliculas", JSON.stringify(listaIdPeliculas));
+  localStorage.setItem("favorites-series", JSON.stringify(listaIdSeries));
 }
-
-
-
-
