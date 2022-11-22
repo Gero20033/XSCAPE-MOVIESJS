@@ -12,7 +12,7 @@ fetch(`https://api.themoviedb.org/3/discover/movie?api_key=5f0f24101490e6eaa3bbc
 })
 .then(function(data){
     console.log(data);
-    for(let i=0; i < data.results.length; i++){
+    for(let i=14; i < data.results.length; i++){
         infoDetailgenre +=`
         <a href="movie-detail2.html?id=${data.results[i].id}">
         <article>

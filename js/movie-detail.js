@@ -53,7 +53,7 @@ fetch(
     let infoReproductores = "Reproductores: ";
     for (let i = 0; i < data.production_companies.length; i++) {
       infoReproductores += `
-      <a id= ${data.production_companies[i].id} class="generos-peliculas">${data.production_companies[i].name} ${data.production_companies[i].logo_path}  </a>
+      <a id= ${data.production_companies[i].id} class="generos-peliculas">${data.production_companies[i].name} </a>
 
       `;
     }
