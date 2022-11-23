@@ -57,7 +57,7 @@ fetch(
 
   });
 
-  //Click de Favoritos
+  // Boton de Favoritos
 
 function handleClickFavorites() {
   if (localStorage.getItem("favorites-serie") == null) {

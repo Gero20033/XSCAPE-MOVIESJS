@@ -60,7 +60,7 @@ fetch(
     contendorReproductores.innerHTML = infoReproductores;
   });
 
-  //Click de Favoritos
+  //Boton de Favoritos
 
 function handleClickFavorites() {
   if (localStorage.getItem("favorites-peliculas") == null) {
